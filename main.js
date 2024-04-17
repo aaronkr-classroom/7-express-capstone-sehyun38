@@ -36,6 +36,7 @@ app.use(express.json());
  * Listing 12.6 (p. 178)
  * 각 페이지 및 요청 타입을 위한 라우트 추가
  */
+app.get("/", homeController.getHome);
 app.get("/courses",homeController.showCourses);
 app.get("/contact",homeController.showSignUp);
 app.post("/contact",homeController.postedContactForm);
