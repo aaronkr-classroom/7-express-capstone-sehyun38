@@ -4,7 +4,7 @@
 
 // 앱 설정
 
-const port = 3001,
+const port = 3000,
     express =require("express"),
     layouts = require("express-ejs-layouts"),
     homeController = require("./controllers/homeController"),
@@ -19,7 +19,7 @@ app.set("port", process.env.PORT || port);
  */
 app.set("view engine", "ejs");
 app.use(layouts);
-
+app.use(express.static("public"));
 
 /**
  * Listing 12.4 (p. 177)
